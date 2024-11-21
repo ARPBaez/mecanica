@@ -1,0 +1,185 @@
+/* Estilo global */
+html, body {
+    height: 100%; /* Faz com que o HTML e o body ocupem toda a altura da página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #2f2f2f, #777, #c0c0c0); /* Gradiente metálico com prata */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Previne rolagem horizontal */
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(45deg, #000, #555); /* Gradiente metálico do preto para cinza escuro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que o cabeçalho se ajuste em telas menores */
+}
+
+header .logo img {
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite o menu se reorganizar em telas menores */
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background-color: #f10a0a; /* Cor metálica prata */
+    box-shadow: 0 0 10px 2px rgba(94, 2, 2, 0.7); /* Efeito de brilho metálico */
+    color: #000;
+}
+
+/* Seção principal */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que os elementos se empilhem em telas menores */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+.text-section {
+    width: 100%; /* Inicialmente ocupa 100% da largura */
+    max-width: 60%; /* Limita a largura máxima */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave para destaque */
+    color: #eee;
+}
+
+.text-section h1 {
+    color: #9e0909; /* Cor metálica prata */
+    font-size: 2.2rem; /* Ajuste no tamanho da fonte */
+    text-shadow: 2px 2px 5px rgba(252, 249, 249, 0.6);
+}
+
+.text-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-section label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.text-section input, .text-section textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.text-section button {
+    padding: 10px 20px;
+    background-color: #b0b0b0; /* Cor do botão metálico prata */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.text-section button:hover {
+    background-color: #8f8f8f; /* Tom metálico mais escuro no hover */
+}
+
+.image-section {
+    width: 100%; /* Inicialmente ocupa 100% da largura */
+    max-width: 35%; /* Limita a largura máxima */
+    display: flex;
+    flex-direction: column; /* Faz o layout empilhar os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000; /* Define a cor do texto como preta */
+}
+
+/* Se necessário, você pode ajustar o tamanho da fonte para outros elementos dentro de .image-section */
+.image-section p {
+    font-size: 1.3rem; /* Ajusta o tamanho do texto de parágrafos dentro de .image-section */
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px; /* Adiciona espaçamento entre a imagem e o texto */
+}
+
+.image-section p {
+    font-size: 1rem;
+    margin-top: 0; /* Remove margem superior para melhor ajuste */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+
+    .text-section h1 {
+        font-size: 1.8rem; /* Ajuste no título */
+    }
+
+    .text-section label {
+        font-size: 1rem; /* Ajuste no tamanho do texto do label */
+    }
+
+    .text-section input, .text-section textarea {
+        font-size: 1rem; /* Ajuste na fonte dos campos */
+    }
+
+    .text-section button {
+        font-size: 1rem; /* Ajuste no tamanho do botão */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Imagem ocupa 100% da largura em telas menores */
+    }
+}

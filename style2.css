@@ -1,0 +1,75 @@
+/* Layout principal */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Formulário */
+.text-section {
+    width: 100%;
+    max-width: 600px; /* Largura máxima para o formulário */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #5a5959;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção lateral (com o ícone do Instagram) */
+.image-section {
+    width: 100%;
+    max-width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ícone do Instagram */
+.instagram-icon svg {
+    fill: none;
+    stroke: #000; /* Cor do ícone */
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instagram-icon svg:hover {
+    transform: scale(1.2); /* Efeito de aumento quando o mouse passa sobre o ícone */
+}
+
+/* Esconde o vídeo inicialmente */
+.instagram-media {
+    display: none;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Empilhar formulário e ícone em telas pequenas */
+        align-items: center;
+    }
+
+    .text-section {
+        width: 100%;
+    }
+
+    .image-section {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Para garantir que não haja barra de rolagem horizontal */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
