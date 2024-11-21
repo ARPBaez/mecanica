@@ -1,1 +1,1 @@
-# mecanica
+https://arpbaez.github.io/mecanica/
